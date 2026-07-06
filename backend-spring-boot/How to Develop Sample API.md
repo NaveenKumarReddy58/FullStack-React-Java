@@ -1,19 +1,23 @@
+echo "## Create Your First REST API
 
+To get started, create a simple controller in your Spring Boot application.
 
-<h5>Since your Spring Boot application is created successfully, the next step is not Docker or AWS yet. Build it layer by layer.</h5>
+\`\`\`java
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-<h5>Here's the roadmap I recommend for you.</h5>
+@RestController
+public class HelloController {
 
-<h3>Create your first REST API</h3>
-
-<p>Create a controller.</p>
-<code>
-    @RestController
-    public class HelloController {
-
-        @GetMapping("/hello")
-        public String hello() {
-            return "Hello Spring Boot";
-        }
+    @GetMapping(\"/hello\")
+    public String hello() {
+        return \"Hello Spring Boot\";
     }
-</code>
+}
+\`\`\`
+
+### How it works
+- **@RestController**: Marks this class as a REST controller so Spring Boot can handle HTTP requests.
+- **@GetMapping(\"/hello\")**: Maps HTTP GET requests to \`/hello\` and returns the response.
+- **Return value**: When you visit \`http://localhost:8080/hello\`, you’ll see \`Hello Spring Boot\`.
+" > README.md
