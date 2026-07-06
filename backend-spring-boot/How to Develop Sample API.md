@@ -75,78 +75,137 @@ Handles incoming HTTP requests.
 
 ---
 
-# 📂 Next Steps (Roadmap)
 
-## 2. HTTP Methods
-- GET
-- POST
-- PUT
-- DELETE
+# 🚀 What I Did After Creating HelloController 
 
-## 3. Request Handling
-- `@PathVariable`
-- `@RequestParam`
-- `@RequestBody`
+---
 
-## 4. JSON Response
-Return Java objects → automatically converted to JSON
+## 3. Understood DispatcherServlet Flow
 
-## 5. Project Structure
+I learned how request flows internally:
+
+```
+Browser / Postman
+      ↓
+DispatcherServlet
+      ↓
+HandlerMapping
+      ↓
+HelloController
+      ↓
+Response returned
+```
+
+---
+
+## 4. Improved API Structure using /api prefix to create sample employee api
+
+Instead of:
+
+```
+/employee
+```
+
+I started using:
+
+```
+/api/employee
+```
+
+Using:
+
+```java
+@RequestMapping("/api")
+```
+
+---
+
+## 5. Learned Java Object → JSON Conversion
+
+Spring Boot automatically converts Java objects to JSON using Jackson.
+
+## 📂 Creating Controller Package and EmployeeController
+
+## 1. Create a Controller Directory
+
+Inside the Spring Boot project structure, I created a new package:
+
 ```
 controller/
-service/
-repository/
-model/
 ```
 
-## 6. Dependency Injection
-- `@Service`
-- `@Component`
-- `@Autowired`
-
-## 7. Database (JPA + MySQL)
-- Entity
-- Repository
-- CRUD operations
-
-## 8. CRUD Project Example
-```
-Employee Management System
-```
-
-## 9. Exception Handling
-- `@ControllerAdvice`
-- `@ExceptionHandler`
-
-## 10. Validation
-- `@Valid`
-- `@NotNull`
-- `@NotBlank`
-
-## 11. Security
-- Spring Security
-- JWT Authentication
-
-## 12. Deployment
-- Build JAR
-- Docker
-- AWS EC2
-- Kubernetes
+This package is used to keep all REST API controllers.
 
 ---
 
-# 🎯 Final Goal
+## 2. Create EmployeeController Class
 
-Build real-world backend applications using:
+Inside the `controller` package, I created:
 
-- Spring Boot
-- REST APIs
-- Database
-- Security
-- Deployment
+```java
+@RestController
+
+@RequestMapping("/api")
+public class EmployeeController {
+    @GetMapping("/employee")
+    public Employee[] getEmployees(){
+        Employee employee1 = Employee.builder()
+                        .id(1)
+                        .name("Naveen")
+                        .salary(10000.00).build();
+        Employee employee2 = Employee.builder()
+                .id(1)
+                .name("Naveen")
+                .salary(10000.00).build();
+
+        return new Employee[] {employee2, employee1};
+    }
+}
+```
+
+### Output:
+```json
+{
+  "id": 1,
+  "name": "Naveen",
+  "salary": 10000
+}
+```
 
 ---
 
-# 🔗 Useful Link
+## 6. Learned Why Constructors Are Not Scalable
 
-👉 [Spring Boot Hello API](http://localhost:8080/hello)
+If an object has many fields (50–100), constructors become hard to manage.
+
+So I learned alternatives:
+
+- Getters & Setters
+- Lombok (@Data)
+- Builder Pattern
+
+---
+
+## 7. Used Lombok for Cleaner Code
+
+Example:
+
+```java
+@Data
+@Builder
+public class Employee {
+    private int id;
+    private String name;
+    private String department;
+    private double salary;
+}
+```
+
+
+## 🧠 Key Learnings So Far
+
+- Spring Boot uses DispatcherServlet for request routing
+- REST APIs return JSON automatically
+- `/api` is best practice for API design
+- Java objects are converted to JSON using Jackson
+- Lombok reduces boilerplate code
