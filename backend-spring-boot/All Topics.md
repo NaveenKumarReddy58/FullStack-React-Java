@@ -1,58 +1,62 @@
-1. Programming & Computer Science Fundamentals
-Java
-Variables, Data Types
-Operators
-Control Statements
-Methods
-Arrays
-Strings
-Collections Framework
-Generics
-Exceptions
-File I/O
-Multithreading
-Concurrency
-Synchronization
-Executors
-CompletableFuture
-Records
-Enums
-Reflection
-Annotations
-Streams API
-Functional Interfaces
-Lambda Expressions
-JVM Memory Model
-Garbage Collection
-JIT Compiler
-ClassLoader
-Java 8–21 features
-Data Structures & Algorithms
-Arrays
-Strings
-Linked List
-Stack
-Queue
-HashMap
-HashSet
-Trees
-Binary Search Tree
-Heap
-Trie
-Graph
-Union Find
-Dynamic Programming
-Greedy
-Sliding Window
-Two Pointers
-Binary Search
-Backtracking
-Recursion
-Time & Space Complexity
-Big O
-Big Theta
-Big Omega
-Complexity Analysis
+# Programming & Computer Science Fundamentals
+
+## Java
+- Variables, Data Types  
+- Operators  
+- Control Statements  
+- Methods  
+- Arrays  
+- Strings  
+- Collections Framework  
+- Generics  
+- Exceptions  
+- File I/O  
+- Multithreading  
+- Concurrency  
+- Synchronization  
+- Executors  
+- CompletableFuture  
+- Records  
+- Enums  
+- Reflection  
+- Annotations  
+- Streams API  
+- Functional Interfaces  
+- Lambda Expressions  
+- JVM Memory Model  
+- Garbage Collection  
+- JIT Compiler  
+- ClassLoader  
+- Java 8–21 features  
+
+## Data Structures & Algorithms
+- Arrays  
+- Strings  
+- Linked List  
+- Stack  
+- Queue  
+- HashMap  
+- HashSet  
+- Trees  
+- Binary Search Tree  
+- Heap  
+- Trie  
+- Graph  
+- Union Find  
+- Dynamic Programming  
+- Greedy  
+- Sliding Window  
+- Two Pointers  
+- Binary Search  
+- Backtracking  
+- Recursion  
+
+## Time & Space Complexity
+- Big O  
+- Big Theta  
+- Big Omega  
+- Complexity Analysis  
+
 2. Backend Development
 Spring Boot
 Auto Configuration
