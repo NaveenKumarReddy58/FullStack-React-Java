@@ -1,23 +1,30 @@
-echo "## Create Your First REST API
+<section>
+  <h2>Spring Boot Roadmap</h2>
+  <p>Since your Spring Boot application is created successfully, the next step is not Docker or AWS yet. Build it layer by layer.</p>
 
-To get started, create a simple controller in your Spring Boot application.
+  <h2>Here's the roadmap I recommend for you.</h2>
 
-\`\`\`java
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+  <article>
+    <h3>Create your first REST API</h3>
+    <p>Create a controller:</p>
 
-@RestController
-public class HelloController {
+    <figure>
+      <pre><code class="language-java">
+        @RestController
+        public class HelloController {
 
-    @GetMapping(\"/hello\")
-    public String hello() {
-        return \"Hello Spring Boot\";
-    }
-}
-\`\`\`
+            @GetMapping("/hello")
+            public String hello() {
+                return "Hello Spring Boot";
+            }
+        }
+      </code></pre>
+      <figcaption>Java code for a simple REST controller</figcaption>
+    </figure>
 
-### How it works
-- **@RestController**: Marks this class as a REST controller so Spring Boot can handle HTTP requests.
-- **@GetMapping(\"/hello\")**: Maps HTTP GET requests to \`/hello\` and returns the response.
-- **Return value**: When you visit \`http://localhost:8080/hello\`, you’ll see \`Hello Spring Boot\`.
-" > README.md
+    <p>When you run the application and visit 
+      <a href="http://localhost:8080/hello" target="_blank">http://localhost:8080/hello</a>, 
+      you’ll see the message: <strong>Hello Spring Boot</strong>.
+    </p>
+  </article>
+</section>
