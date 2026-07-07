@@ -19,16 +19,18 @@ int age = 25;
 
 There are **8** primitive data types.
 
-  Data Type   Size            Example
-  ----------- --------------- ------------
-  byte        1 byte          100
-  short       2 bytes         1000
-  int         4 bytes         100000
-  long        8 bytes         100000000L
-  float       4 bytes         10.5f
-  double      8 bytes         10.5
-  char        2 bytes         'A'
-  boolean     JVM-dependent   true
+```text
+    Data Type   Size            Example
+    ----------- --------------- ------------
+    byte        1 byte          100
+    short       2 bytes         1000
+    int         4 bytes         100000
+    long        8 bytes         100000000L
+    float       4 bytes         10.5f
+    double      8 bytes         10.5
+    char        2 bytes         'A'
+    boolean     JVM-dependent   true
+```
 
 ### 3. Difference between primitive and non-primitive data types?
 
