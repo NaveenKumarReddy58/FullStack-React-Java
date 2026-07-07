@@ -4,8 +4,6 @@
 
 ### 1. What is a variable in Java?
 
-**Expected Answer:**
-
 A variable is a named memory location used to store data. Every variable
 has a data type that determines what kind of value it can store.
 
@@ -15,23 +13,116 @@ has a data type that determines what kind of value it can store.
 int age = 25;
 ```
 
-### 2. What are the primitive data types in Java?
+### What are primitive data types in Java?
 
-There are **8** primitive data types.
+**Expected Answer:**
 
-```text
-    Data Type   Size            Example
-    ----------- --------------- ------------
-    byte        1 byte          100
-    short       2 bytes         1000
-    int         4 bytes         100000
-    long        8 bytes         100000000L
-    float       4 bytes         10.5f
-    double      8 bytes         10.5
-    char        2 bytes         'A'
-    boolean     JVM-dependent   true
+Primitive data types are the **basic built-in data types** provided by Java. They store the **actual value directly in memory** rather than a reference to an object.
+
+Java has **8 primitive data types**.
+
+| Data Type | Size | Default Value | Example |
+|-----------|------|---------------|---------|
+| `byte` | 1 byte | `0` | `byte age = 25;` |
+| `short` | 2 bytes | `0` | `short marks = 1000;` |
+| `int` | 4 bytes | `0` | `int salary = 50000;` |
+| `long` | 8 bytes | `0L` | `long population = 8000000000L;` |
+| `float` | 4 bytes | `0.0f` | `float price = 10.5f;` |
+| `double` | 8 bytes | `0.0` | `double pi = 3.14159;` |
+| `char` | 2 bytes | `'\u0000'` | `char grade = 'A';` |
+| `boolean` | JVM-dependent | `false` | `boolean isActive = true;` |
+
+### Characteristics of Primitive Data Types
+
+- Store the actual value directly.
+- Have a fixed size (except `boolean`, whose representation is JVM-dependent).
+- Are predefined by Java.
+- Cannot be `null`.
+- Do not have methods or fields.
+- Generally provide better performance than reference types.
+
+### Example
+
+```java
+int age = 25;
+double salary = 55000.75;
+char grade = 'A';
+boolean isStudent = true;
 ```
 
+### Interview Follow-up
+
+**Q:** Why are primitive data types faster than non-primitive data types?
+
+**Answer:**
+
+Primitive data types store values directly in memory and do not require object creation or dereferencing. This makes them more memory-efficient and generally faster to access than reference types.
+
+### Interview Tip
+
+A strong interview answer is:
+
+> "Primitive data types are Java's built-in data types that store actual values directly in memory. Java provides eight primitive types: `byte`, `short`, `int`, `long`, `float`, `double`, `char`, and `boolean`. They are fixed in size, cannot be `null`, and do not have methods because they are not objects."
+
+### 3. What are the non-primitive data types in Java?
+
+**Expected Answer:**
+
+Non-primitive data types are also known as **reference types**. They do not store the actual value directly; instead, they store a reference (memory address) to the object.
+
+Unlike primitive data types, non-primitive types:
+- Can store `null`
+- Have methods and fields
+- Are created from classes, interfaces, arrays, or enums
+- Their size is not fixed
+
+**Examples of non-primitive data types:**
+
+```java
+String name = "Naveen";
+
+int[] numbers = {1, 2, 3};
+
+ArrayList<String> list = new ArrayList<>();
+
+Scanner sc = new Scanner(System.in);
+
+Employee emp = new Employee();
+
+enum Day {
+    MONDAY, TUESDAY
+}
+```
+
+The main non-primitive data types are:
+
+- String
+- Arrays
+- Classes
+- Objects
+- Interfaces
+- Enums
+- Records (Java 16+)
+
+**Example:**
+
+```java
+String name = "Naveen";
+Employee emp = new Employee();
+int[] numbers = {1, 2, 3};
+```
+
+**Interview Follow-up:**
+
+**Q:** Is `String` a primitive data type?
+
+**A:** No. `String` is a class in Java. It is a non-primitive (reference) data type that provides many useful methods such as:
+
+```java
+name.length();
+name.toUpperCase();
+name.substring(0, 3);
+```
 ### 3. Difference between primitive and non-primitive data types?
 
 ```text
