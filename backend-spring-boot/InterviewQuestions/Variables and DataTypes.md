@@ -34,12 +34,14 @@ There are **8** primitive data types.
 
 ### 3. Difference between primitive and non-primitive data types?
 
+```text
   Primitive             Non-Primitive
   --------------------- ------------------
   Stores actual value   Stores reference
   Fixed size            Variable size
   Cannot be null        Can be null
   Faster                Slightly slower
+```
 
 **Example:**
 
